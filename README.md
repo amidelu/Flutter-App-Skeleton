@@ -1,4 +1,4 @@
-# flutter_opl
+# Flutter Base App Skeleton
 
 Flutter app skeleton with following approach:
 
