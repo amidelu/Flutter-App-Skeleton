@@ -2,17 +2,15 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_opl/core/constants/api_urls.dart';
 import 'package:flutter_opl/presentation/splash/cubit/splash_cubit.dart';
 import 'package:flutter_opl/service_locator.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_storage/get_storage.dart';
 
 import 'build_environment.dart';
+import 'common/global_widgets/no_internet_widget.dart';
 import 'core/configs/theme/g_theme.dart';
 import 'core/network/connectivity/connectivity_cubit.dart';
-import 'presentation/auth/bloc/sign_in_bloc.dart';
-import 'presentation/global_widgets/no_internet_widget.dart';
 import 'presentation/splash/pages/splash.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -34,7 +32,7 @@ void main() async {
   }
 
   setupServiceLocator();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

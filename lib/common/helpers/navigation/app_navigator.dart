@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_opl/main.dart';
 
 class AppNavigator {
+  static void pushReplacement(Widget widget) {
+    BuildContext? context = navigatorKey.currentContext;
 
-  static void pushReplacement(BuildContext context,Widget widget) {
     Navigator.pushReplacement(
-      context,
+      context!,
       MaterialPageRoute(builder: (context) => widget)
     );
   }
 
-  static void push(BuildContext context,Widget widget) {
+  static void push(Widget widget) {
+    BuildContext? context = navigatorKey.currentContext;
+
     Navigator.push(
-      context,
+      context!,
       MaterialPageRoute(builder: (context) => widget)
     );
   }
 
-  static void pushAndRemove(BuildContext context,Widget widget) {
+  static void pushAndRemove(Widget widget) {
+    BuildContext? context = navigatorKey.currentContext;
+
     Navigator.pushAndRemoveUntil(
-      context,
+      context!,
       MaterialPageRoute(builder: (context) => widget),
       (Route<dynamic> route) => false
     );
